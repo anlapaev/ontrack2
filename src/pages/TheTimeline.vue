@@ -13,5 +13,10 @@
 <script setup>
 import ThelineItem from '../components/TimelineItem.vue'
 
-defineProps(['timelineItems'])
+defineProps({
+  timelineItems: {
+    required: true,
+    type: Array
+  }
+})
 </script>
