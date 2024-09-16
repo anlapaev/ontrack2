@@ -13,5 +13,5 @@
 
 <script setup>
 import { CheckCircleIcon } from '@heroicons/vue/24/solid'
-import { PAGE_PROGRESS } from '../constans'
+import { PAGE_PROGRESS } from '../constants'
 </script>

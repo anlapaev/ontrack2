@@ -17,7 +17,7 @@
 <script setup>
 import NavItem from './NavItem.vue'
 import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
-import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from '../constans'
+import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from '../constants'
 
 defineProps(['currentPage'])
 

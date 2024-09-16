@@ -10,7 +10,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from './constans.js'
+import { PAGE_TIMELINE, PAGE_ACTIVITIES, PAGE_PROGRESS } from './constants.js'
 import TheHeader from './components/TheHeader.vue'
 import TheNav from './components/TheNav.vue'
 import TheTimeline from './pages/TheTimeline.vue'
@@ -28,6 +28,6 @@ function normalizePageHash() {
 }
 
 function goTo(page) {
-    currentPage.value = page
+  currentPage.value = page
 }
 </script>
