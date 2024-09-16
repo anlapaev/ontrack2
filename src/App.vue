@@ -10,6 +10,7 @@
       v-show="currentPage === PAGE_ACTIVITIES"
       :activities="activities"
       @delete-activity="deleteActivity"
+      @create-activity="createActivity"
     />
     <TheProgress v-show="currentPage === PAGE_PROGRESS" />
   </main>
@@ -41,5 +42,9 @@ function goTo(page) {
 
 function deleteActivity(activity) {
   activities.value.splice(activities.value.indexOf(activity), 1)
+}
+
+function createActivity(activity) {
+  activities.value.push(activity)
 }
 </script>
