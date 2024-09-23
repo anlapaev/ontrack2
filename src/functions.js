@@ -14,23 +14,11 @@ export function normalizePageHash() {
 }
 
 export function generateActivities() {
-  return [
-    {
-      id: id(),
-      name: 'Coding',
-      secondsToComplete: 0 * SECONDS_IN_HOUR
-    },
-    {
-      id: id(),
-      name: 'Training',
-      secondsToComplete: 1 * SECONDS_IN_HOUR
-    },
-    {
-      id: id(),
-      name: 'Reading',
-      secondsToComplete: 2 * SECONDS_IN_HOUR
-    }
-  ]
+  return ['Coding', 'Reading', 'Training'].map((name, hours) => ({
+    id: id(),
+    name,
+    secondsToComplete: hours * SECONDS_IN_HOUR
+  }))
 }
 export function id() {
   return Date.now().toString(36) + Math.random().toString(36).substring(2)
@@ -47,5 +35,5 @@ export function generateTimelineItems() {
 }
 
 export function generateActivitySelectOptions(activities) {
-    return activities.map((activity) => ({ value: activity.id, label: activity.name }))
+  return activities.map((activity) => ({ value: activity.id, label: activity.name }))
 }
